@@ -21,12 +21,21 @@
         </a>
         
         <nav class="navbar">
-            <a href="index.html" class="active">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="tienda.html">Tienda</a>
-            <a href="donacion.html">Donaciones</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="index.html" class="active" onclick="cargarArchivo('index.html')">Inicio</a>
+            <a href="nosotros.html" onclick="cargarArchivo('nosotros.html')">Nosotros</a>
+            <div class="dropdown">
+                <a href="tienda.html" class="dropbtn" onclick="cargarArchivo('tienda.html')">Tienda</a>
+                <div class="dropdown-content">
+                    <a href="seccion_perro.html" onclick="cargarArchivo('seccion_perro.html')">Perros</a>
+                    <a href="seccion_gato.html" onclick="cargarArchivo('seccion_gato.html')">Gatos</a>
+                </div>
+            </div>
+            <a href="donacion.html" onclick="cargarArchivo('donacion.html')">Donaciones</a>
+            <a href="contacto.html" onclick="cargarArchivo('contacto.html')">Contacto</a>
         </nav>
+        
+        <!-- Contenedor donde se cargará el contenido -->
+        <div id="contenido"></div>
 
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
@@ -75,7 +84,7 @@
             <a href="#" class="btn">Ir a pagar</a>
         </div>
 
-        <!-- carrita de compras final -->
+        <!-- carrito de compras final -->
 
     </header>
 
@@ -124,7 +133,7 @@
             <div class="content">
                 <span>Hasta 50% de descuento</span>
                 <h3>Sección de gatos</h3>
-                <a href="tienda.html" class="btn"> Ver catálogo</a>
+                <a href="seccion_gato.html" class="btn"> Ver catálogo</a>
             </div>
         </div>
 
@@ -133,7 +142,7 @@
             <div class="content">
                 <span> Hasta 50% de descuento</span>
                 <h3>Sección de perros</h3>
-                <a href="tienda.html" class="btn"> Ver catálogo</a>
+                <a href="seccion_perro.html" class="btn"> Ver catálogo</a>
             </div>
         </div>
     </section>
@@ -205,7 +214,7 @@
                 <h3>Newsletter</h3>
                 <p>¡Suscríbete para recibir actualizaciones de nuevas ofertas!</p>
                 <form action="">
-                    <input type="email" placeholder="Correo electrónico">
+                    <input type="email" placeholder="Correo electrónico" required>
                     <input type="submit" value="Suscribirse" class="btn">
                 </form>
                 <img src="images/payment.png" class="payment" alt="metodo pago">
@@ -219,5 +228,6 @@
     <!-- javascript sección-->
     <script src="script.js"></script>
     <script src="carousel.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>

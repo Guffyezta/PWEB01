@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,12 +21,21 @@
         </a>
         
         <nav class="navbar">
-            <a href="index.html" class="active">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="tienda.html">Tienda</a>
-            <a href="donacion.html">Donaciones</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="index.html" class="active" onclick="cargarArchivo('index.html')">Inicio</a>
+            <a href="nosotros.html" onclick="cargarArchivo('nosotros.html')">Nosotros</a>
+            <div class="dropdown">
+                <a href="tienda.html" class="dropbtn" onclick="cargarArchivo('tienda.html')">Tienda</a>
+                <div class="dropdown-content">
+                    <a href="seccion_perro.html" onclick="cargarArchivo('seccion_perro.html')">Perros</a>
+                    <a href="seccion_gato.html" onclick="cargarArchivo('seccion_gato.html')">Gatos</a>
+                </div>
+            </div>
+            <a href="donacion.html" onclick="cargarArchivo('donacion.html')">Donaciones</a>
+            <a href="contacto.html" onclick="cargarArchivo('contacto.html')">Contacto</a>
         </nav>
+        
+        <!-- Contenedor donde se cargará el contenido -->
+        <div id="contenido"></div>
 
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
@@ -70,10 +83,12 @@
             <div class="total">Total: $32.020</div>
             <a href="#" class="btn">Ir a pagar</a>
         </div>
+
+        <!-- carrito de compras final -->
+
     </header>
 
     <!-- header final -->
-
 
     <!-- sub heading sección -->
 
@@ -84,6 +99,44 @@
     <!-- sub heading final -->
 
     <!-- nosotros sección -->
+
+    <section class="team-section">
+        <div class="box_team">
+          <div class="image">
+            <img src="images/team_1.png" alt="Image 1">
+          </div>
+          <div class="integrante">
+            <h2>Daniela Huaiquiñir</h2>
+            <p>¡Hola! ¿Qué tal? Soy estudiante de 2º año en Ingeniería en Informática. En este momento, soy la encargada de la mantención
+                del sitio web. Mi equipo y yo estamos enfocados en brindar la mejor experiencia posible a nuestros clientes, proporcionando
+                soluciones intuitivas e innovadoras para todos.</p>
+          </div>
+        </div>
+      
+        <div class="box_team">
+          <div class="image">
+            <img src="images/team_2.png" alt="Image 2">
+          </div>
+          <div class="integrante">
+            <h2>Tomás Catalán</h2>
+            <p>¡Un gusto! Soy estudiante de Ingeniería en Informática en Duoc UC. Actualmente, fuera del ámbito acádemico junto al resto de
+                nuestro equipo soy encargado en el área de mantención y distribución de productos. Esperando tener la mejor entrega a nuestros
+                clientes y nuestros amigos peludos.</p>
+          </div>
+        </div>
+      
+        <div class="box_team">
+          <div class="image">
+            <img src="images/team_3.png" alt="Image 3">
+          </div>
+          <div class="integrante">
+            <h2>Daniela Ardiaca</h2>
+            <p>¡Hola a todos! También soy estudiante de Informática y actualmente soy la encargada en el Área de Gestion de Proyectos del sitio
+                web donde me involucro en la planificación, organización, motivación y control de recursos para alcanzar objetivos específicos
+                y cumplir con ciertos criterios de éxito.</p>
+          </div>
+        </div>
+    </section>
 
     <section class="about">
         <div class="image">
@@ -214,7 +267,7 @@
                 <h3>Newsletter</h3>
                 <p>¡Suscríbete para recibir actualizaciones de nuevas ofertas!</p>
                 <form action="">
-                    <input type="email" placeholder="Correo electrónico">
+                    <input type="email" placeholder="Correo electrónico" required>
                     <input type="submit" value="Suscribirse" class="btn">
                 </form>
                 <img src="images/payment.png" class="payment" alt="metodo pago">
@@ -227,5 +280,6 @@
 
     <!-- javascript sección-->
     <script src="script.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>

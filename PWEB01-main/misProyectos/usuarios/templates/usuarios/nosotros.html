@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header sección -->
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="icons/logo.png" class="logo-img" alt="Logo">
+            <span class="logo-text">Tienda de mascotas</span>
+        </a>
+        
+        <nav class="navbar">
+            <a href="index.html" class="active" onclick="cargarArchivo('index.html')">Inicio</a>
+            <a href="nosotros.html" onclick="cargarArchivo('nosotros.html')">Nosotros</a>
+            <div class="dropdown">
+                <a href="tienda.html" class="dropbtn" onclick="cargarArchivo('tienda.html')">Tienda</a>
+                <div class="dropdown-content">
+                    <a href="seccion_perro.html" onclick="cargarArchivo('seccion_perro.html')">Perros</a>
+                    <a href="seccion_gato.html" onclick="cargarArchivo('seccion_gato.html')">Gatos</a>
+                </div>
+            </div>
+            <a href="donacion.html" onclick="cargarArchivo('donacion.html')">Donaciones</a>
+            <a href="contacto.html" onclick="cargarArchivo('contacto.html')">Contacto</a>
+        </nav>
+        
+        <!-- Contenedor donde se cargará el contenido -->
+        <div id="contenido"></div>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="¿Qué deseas buscar?">
+            <label class="fas fa-search"></label>
+        </form>
+
+        <!-- carrito de compras -->
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/comidas/comida_perro.png" alt="comida perro">
+                <div class="content">
+                    <h3>2KG Comida para Perro</h3>
+                    <span class="price">$19.180</span>
+                    <span class="quantity"> Cantidad: 2</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/bandana_perro/bandana_perro.png" alt="bandana perro">
+                <div class="content">
+                    <h3>Bandana para perro</h3>
+                    <span class="price">$1.850</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/arnes_perro/arnes_perro.png" alt="arnes perro">
+                <div class="content">
+                    <h3>Arnes para perro</h3>
+                    <span class="price">$10.990</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+            <div class="total">Total: $32.020</div>
+            <a href="#" class="btn">Ir a pagar</a>
+        </div>
+
+        <!-- carrito de compras final -->
+
+    </header>
+
+    <!-- header final -->
+
+    <!-- sub heading sección -->
+
+    <div class="sub-heading">
+        <h1>¿Quiénes somos?</h1>
+    </div>
+
+    <!-- sub heading final -->
+
+    <!-- nosotros sección -->
+
+    <section class="team-section">
+        <div class="box_team">
+          <div class="image">
+            <img src="images/team_1.png" alt="Image 1">
+          </div>
+          <div class="integrante">
+            <h2>Daniela Huaiquiñir</h2>
+            <p>¡Hola! ¿Qué tal? Soy estudiante de 2º año en Ingeniería en Informática. En este momento, soy la encargada de la mantención
+                del sitio web. Mi equipo y yo estamos enfocados en brindar la mejor experiencia posible a nuestros clientes, proporcionando
+                soluciones intuitivas e innovadoras para todos.</p>
+          </div>
+        </div>
+      
+        <div class="box_team">
+          <div class="image">
+            <img src="images/team_2.png" alt="Image 2">
+          </div>
+          <div class="integrante">
+            <h2>Tomás Catalán</h2>
+            <p>¡Un gusto! Soy estudiante de Ingeniería en Informática en Duoc UC. Actualmente, fuera del ámbito acádemico junto al resto de
+                nuestro equipo soy encargado en el área de mantención y distribución de productos. Esperando tener la mejor entrega a nuestros
+                clientes y nuestros amigos peludos.</p>
+          </div>
+        </div>
+      
+        <div class="box_team">
+          <div class="image">
+            <img src="images/team_3.png" alt="Image 3">
+          </div>
+          <div class="integrante">
+            <h2>Daniela Ardiaca</h2>
+            <p>¡Hola a todos! También soy estudiante de Informática y actualmente soy la encargada en el Área de Gestion de Proyectos del sitio
+                web donde me involucro en la planificación, organización, motivación y control de recursos para alcanzar objetivos específicos
+                y cumplir con ciertos criterios de éxito.</p>
+          </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="image">
+            <img src="images/mision.jpg" alt="mision">
+        </div>
+
+        <div class="content">
+            <h3>Nuestra misión</h3>
+            <p>Buscamos ser el destino preferido de los amantes de las mascotas, ofreciendo una amplia
+                gama de productos de alta calidad que promuevan el bienestar y la felicidad de nuestros
+                clientes peludos. Nos esforzamos por proporcionar una experiencia de compra excepcional,
+                brindando asesoramiento experto y un servicio personalizado que refleje nuestro profundo
+                compromiso con el cuidado y la satisfacción de cada mascota y su familia.</p>
+        </div>
+        <br>
+
+        <div class="image">
+            <img src="images/vision.jpg" alt="vision">
+        </div>
+        <div class="content">
+            <h3>Nuestra visión</h3>
+            <p>Buscamos ser reconocidos como líderes en la industria de suministros para mascotas, siendo
+                la referencia en calidad, variedad y servicio al cliente. Nos comprometemos a seguir
+                innovando y mejorando constantemente para satisfacer las necesidades cambiantes de nuestros
+                clientes y mantenernos a la vanguardia de las tendencias en el cuidado de mascotas.</p> 
+            <br>
+        </div>
+    </section>
+
+    <!-- nosotros final -->
+
+    <!-- valores sección -->
+
+    <section class="base">
+        <div class="heading">
+            <h3>Nuestros valores</h3>
+        </div>
+
+        <div class="box-container">
+
+            <div class="image">
+                <img src="images/pets-base.gif" alt="mascotas">
+            </div>
+
+            <div class="container">
+
+                <div class="item">
+                    <div class="icon">
+                        <img src="icons/valor1.png" alt="valor 1">
+                    </div>
+                    <div class="content">
+                        <h3>Pasión por los animales</h3>
+                        <p>Amamos y respetamos a todas las mascotas, y nos esforzamos por promover su salud,
+                            seguridad y felicidad en todo lo que hacemos.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">
+                        <img src="icons/valor2.png" alt="valor 2">
+                    </div>
+                    <div class="content">
+                        <h3>Experiencia de servicio</h3>
+                        <p>Nos comprometemos a brindar un servicio excepcional y personalizado a cada cliente,
+                            superando siempre sus expectativas.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">
+                        <img src="icons/valor3.png" alt="valor 3">
+                    </div>
+                    <div class="content">
+                        <h3>Compromiso de integridad</h3>
+                        <p>Operamos con honestidad, transparencia y ética, construyendo relaciones de confianza
+                            y respeto con nuestros clientes y proveedores.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">
+                        <img src="icons/valor4.png" alt="valor 4">
+                    </div>
+                    <div class="content">
+                        <h3>Compromiso de calidad</h3>
+                        <p>Seleccionamos cuidadosamente productos de la más alta calidad para garantizar la
+                            satisfacción y el bienestar de las mascotas y sus dueños.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">
+                        <img src="icons/valor5.png" alt="valor 5">
+                    </div>
+                    <div class="content">
+                        <h3>Responsabilidad social y ambiental</h3>
+                        <p>Nos comprometemos a ser un emprendimiento responsable, que apoya y adopta prácticas
+                            sostenibles en nuestras operaciones comerciales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- valores final -->
+
+    <!-- footer sección -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3> <img src="icons/logo.png" class="logo-img" alt="Logo" style="width: 15%;"> Informaciones</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i>+569-12345678</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i>serviciocliente@tda.cl</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Santiago, Chile #15243</a>
+            </div>
+
+            <div class="box">
+                <h3>Enlaces de interés</h3>
+                <a href="#">Tienda</a>
+                <a href="#">Métodos de pago</a>
+                <a href="#">Términos de uso</a>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>¡Suscríbete para recibir actualizaciones de nuevas ofertas!</p>
+                <form action="">
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="submit" value="Suscribirse" class="btn">
+                </form>
+                <img src="images/payment.png" class="payment" alt="metodo pago">
+            </div>
+        </div>
+        <div class="credit"><span>&copy;2024. </span>Tienda de mascotas. Todos los derechos reservados.</div>
+    </section>
+
+    <!-- footer final -->
+
+    <!-- javascript sección-->
+    <script src="script.js"></script>
+    <script src="ajax.js"></script>
+</body>
+</html>

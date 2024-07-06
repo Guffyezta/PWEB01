@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header sección -->
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="icons/logo.png" class="logo-img" alt="Logo">
+            <span class="logo-text">Tienda de mascotas</span>
+        </a>
+        
+        <nav class="navbar">
+            <a href="index.html" class="active" onclick="cargarArchivo('index.html')">Inicio</a>
+            <a href="nosotros.html" onclick="cargarArchivo('nosotros.html')">Nosotros</a>
+            <div class="dropdown">
+                <a href="tienda.html" class="dropbtn" onclick="cargarArchivo('tienda.html')">Tienda</a>
+                <div class="dropdown-content">
+                    <a href="seccion_perro.html" onclick="cargarArchivo('seccion_perro.html')">Perros</a>
+                    <a href="seccion_gato.html" onclick="cargarArchivo('seccion_gato.html')">Gatos</a>
+                </div>
+            </div>
+            <a href="donacion.html" onclick="cargarArchivo('donacion.html')">Donaciones</a>
+            <a href="contacto.html" onclick="cargarArchivo('contacto.html')">Contacto</a>
+        </nav>
+        
+        <!-- Contenedor donde se cargará el contenido -->
+        <div id="contenido"></div>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="¿Qué deseas buscar?">
+            <label class="fas fa-search"></label>
+        </form>
+
+        <!-- carrito de compras -->
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/comidas/comida_perro.png" alt="comida perro">
+                <div class="content">
+                    <h3>2KG Comida para Perro</h3>
+                    <span class="price">$19.180</span>
+                    <span class="quantity"> Cantidad: 2</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/bandana_perro/bandana_perro.png" alt="bandana perro">
+                <div class="content">
+                    <h3>Bandana para perro</h3>
+                    <span class="price">$1.850</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/arnes_perro/arnes_perro.png" alt="arnes perro">
+                <div class="content">
+                    <h3>Arnes para perro</h3>
+                    <span class="price">$10.990</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+            <div class="total">Total: $32.020</div>
+            <a href="#" class="btn">Ir a pagar</a>
+        </div>
+
+        <!-- carrito de compras final -->
+
+    </header>
+
+    <!-- header finaliza -->
+
+    <!-- sub heading sección -->
+
+    <div class="sub-heading">
+        <h1>Contáctanos</h1>
+    </div>
+
+    <!-- sub heading final -->
+
+    <!-- contacto sección -->
+
+    <section class="contact">
+        <div class="row">
+            <form action="">
+                <h3>Contacto</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Ingresa tu nombre" class="box" required>
+                    <input type="text" placeholder="Ingresa tu apellido" class="box" required>
+                    <input type="text" placeholder="Ingresa tu teléfono" class="box" required>
+                    <input type="email" placeholder="Ingresa tu correo electrónico" class="box" required>
+                    <label type="text" class="box">Ciudad de residencia:
+                    <select id="city" placeholder="Ingresa tu correo electrónico" required>
+                        <option value="" disabled selected>Seleccionar</option>
+                        <option value="ap">Arica y Parinacota</option>
+                        <option value="ta">Tarapacá</option>
+                        <option value="an">Antofagasta</option>
+                        <option value="at">Atacama</option>
+                        <option value="co">Coquimbo</option>
+                        <option value="va">Valparaíso</option>
+                        <option value="rm">Metropolitana</option>
+                        <option value="oh">O'Higgins</option>
+                        <option value="ml">Maule</option>
+                        <option value="nb">Ñuble</option>
+                        <option value="bi">Biobío</option>
+                        <option value="ar">Araucanía</option>
+                        <option value="lr">Los Ríos</option>
+                        <option value="ll">Los Lagos</option>
+                        <option value="ai">Aysen</option>
+                        <option value="mg">Magallanes</option>
+                    </select>
+                    </label>
+                </div>
+                <textarea placeholder="Escribe tu mensaje" cols="30" rows="10" required></textarea>
+                <input type="submit" value="Enviar mensaje" class="btn">
+            </form>
+            <!-- mapa de google -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0892083106046!2d-70.66055162410261!3d-33.446982297335026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c507f91be917%3A0xcfac72a68dd4b986!2sDuoc%20UC%20-%20Sede%20Padre%20Alonso%20de%20Ovalle!5e0!3m2!1ses-419!2scl!4v1713122186086!5m2!1ses-419!2scl" width="550" allowfullscreen="" loading="lazy" class="map"></iframe>
+        </div>
+    </section>
+
+    <!-- contacto final -->
+
+    <!-- footer sección -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3> <img src="icons/logo.png" class="logo-img" alt="Logo" style="width: 15%;"> Informaciones</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i>+569-12345678</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i>serviciocliente@tda.cl</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Santiago, Chile #15243</a>
+            </div>
+
+            <div class="box">
+                <h3>Enlaces de interés</h3>
+                <a href="#">Tienda</a>
+                <a href="#">Métodos de pago</a>
+                <a href="#">Términos de uso</a>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>¡Suscríbete para recibir actualizaciones de nuevas ofertas!</p>
+                <form action="">
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="submit" value="Suscribirse" class="btn">
+                </form>
+                <img src="images/payment.png" class="payment" alt="metodo pago">
+            </div>
+        </div>
+        <div class="credit"><span>&copy;2024. </span>Tienda de mascotas. Todos los derechos reservados.</div>
+    </section>
+
+    <!-- footer final -->
+
+    <!-- javascript sección -->
+    <script src="script.js"></script>
+    <script src="ajax.js"></script>
+    <script src="validacion.js"></script>
+</body>
+</html>

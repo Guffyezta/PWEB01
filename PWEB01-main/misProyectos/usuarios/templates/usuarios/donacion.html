@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header sección -->
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="icons/logo.png" class="logo-img" alt="Logo">
+            <span class="logo-text">Tienda de mascotas</span>
+        </a>
+        
+        <nav class="navbar">
+            <a href="index.html" class="active" onclick="cargarArchivo('index.html')">Inicio</a>
+            <a href="nosotros.html" onclick="cargarArchivo('nosotros.html')">Nosotros</a>
+            <div class="dropdown">
+                <a href="tienda.html" class="dropbtn" onclick="cargarArchivo('tienda.html')">Tienda</a>
+                <div class="dropdown-content">
+                    <a href="seccion_perro.html" onclick="cargarArchivo('seccion_perro.html')">Perros</a>
+                    <a href="seccion_gato.html" onclick="cargarArchivo('seccion_gato.html')">Gatos</a>
+                </div>
+            </div>
+            <a href="donacion.html" onclick="cargarArchivo('donacion.html')">Donaciones</a>
+            <a href="contacto.html" onclick="cargarArchivo('contacto.html')">Contacto</a>
+        </nav>
+        
+        <!-- Contenedor donde se cargará el contenido -->
+        <div id="contenido"></div>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="¿Qué deseas buscar?">
+            <label class="fas fa-search"></label>
+        </form>
+
+        <!-- carrito de compras -->
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/comidas/comida_perro.png" alt="comida perro">
+                <div class="content">
+                    <h3>2KG Comida para Perro</h3>
+                    <span class="price">$19.180</span>
+                    <span class="quantity"> Cantidad: 2</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/bandana_perro/bandana_perro.png" alt="bandana perro">
+                <div class="content">
+                    <h3>Bandana para perro</h3>
+                    <span class="price">$1.850</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/arnes_perro/arnes_perro.png" alt="arnes perro">
+                <div class="content">
+                    <h3>Arnes para perro</h3>
+                    <span class="price">$10.990</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+            <div class="total">Total: $32.020</div>
+            <a href="#" class="btn">Ir a pagar</a>
+        </div>
+
+        <!-- carrito de compras final -->
+
+    </header>
+
+    <!-- header final -->
+
+    <!-- sub heading -->
+
+    <div class="sub-heading">
+        <h1>Haz tu aporte a OSFL</h1>
+    </div>
+
+    <!-- sub heading final -->
+
+    <!-- ofsl sección -->
+    
+    <section class="osfl">
+        <div class="box-container">
+            <div class="product" data-name="p-1">
+                <div class="box ver-mas" data-name="p-1">
+                    <div class="image">
+                        <img src="images/osfl.png" alt="osfl 1">
+                    </div>
+                    <div class="content">
+                        <h3>World Wildfire</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-2">
+                <div class="box ver-mas" data-name="p-2">
+                    <div class="image">
+                        <img src="images/osfl_2.png" alt="osfl 2">
+                    </div>
+                    <div class="content">
+                        <h3>Purina - Juntos es mejor</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-3">
+                <div class="box ver-mas" data-name="p-3">
+                    <div class="image">
+                        <img src="images/osfl_3.jpg" alt="osfl 3">
+                    </div>
+                    <div class="content">
+                        <h3>Callejeros buscan hogar</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-4">
+                <div class="box ver-mas" data-name="p-4">
+                    <div class="image">
+                        <img src="images/osfl_4.jpg" alt="osfl 4">
+                    </div>
+                    <div class="content">
+                        <h3>Garras y patas</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ofsl final -->
+
+    <!-- previa_ofsl sección -->
+
+    <div class="products-preview">
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="images/osfl.png" alt="">
+            <h3>World Wildfire</h3>
+            <p>Dedicada a la prevención y gestión de incendios forestales en todo el mundo. Su misión es proteger
+                los ecosistemas naturales y las comunidades humanas de los devastadores efectos a través de la educación, la concienciación
+                pública y la acción directa.</p>
+        </div>
+     
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="images/osfl_2.png" alt="">
+            <h3>Purina - Juntos es mejor</h3>
+            <p>Iniciativa de la marca de alimentos para mascotas Purina que se enfoca en mejorar la calidad de vida
+                de las mascotas a través de programas de apoyo a refugios, educación sobre cuidado animal y campañas de concienciación.</p>
+        </div>
+
+        <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <img src="images/osfl_3.jpg" alt="">
+            <h3>Callejeros buscan hogar</h3>
+            <p>Dedicada al rescate, cuidado y adopción de animales callejeros. Su misión es proporcionar refugio,
+                atención médica y amor a los animales abandonados o maltratados, con el objetivo final de encontrarles hogares permanentes donde
+                puedan vivir felices y seguros.</p>
+        </div>
+
+        <div class="preview" data-target="p-4">
+            <i class="fas fa-times"></i>
+            <img src="images/osfl_4.jpg" alt="">
+            <h3>Garras y patas</h3>
+            <p>Organización comprometida con el rescate y rehabilitación de animales en situación de abandono,
+                maltrato o riesgo. Ofrecen refugio, atención veterinaria y búsqueda de adopciones responsables para asegurar un futuro mejor
+                para los animales necesitados.</p>
+        </div>
+    </div>
+
+    <!-- previa_ofsl final -->
+
+    <!-- donaciones sección -->
+
+    <section class="contact">
+        <div class="row">
+            <form action="">
+                <h3>Haz tu donativo</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Ingresa tu nombre" class="box" required>
+                    <input type="text" placeholder="Ingresa tu apellido" class="box" required>
+                    <input type="text" placeholder="Ingresa tu teléfono" class="box" required>
+                    <input type="email" placeholder="Ingresa tu correo electrónico" class="box" required>
+                    <label type="text" class="box">Organización:
+                        <select id="city" required>
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="ww">World Wildfire</option>
+                            <option value="js">Juntos es mejor</option>
+                            <option value="bh">Buscan hogar</option>
+                            <option value="gp">Garras y patas</option>
+                        </select>
+                    </label>
+                    <input type="number" placeholder="Ingresa monto" class="box" required>
+                </div>
+                <textarea placeholder="Escribe tu mensaje" cols="30" rows="10" required></textarea>
+                <input type="submit" value="Enviar donativo" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <!-- donaciones final -->
+
+    <!-- footer sección -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3> <img src="icons/logo.png" class="logo-img" alt="Logo" style="width: 15%;"> Informaciones</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i>+569-12345678</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i>serviciocliente@tda.cl</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Santiago, Chile #15243</a>
+            </div>
+
+            <div class="box">
+                <h3>Enlaces de interés</h3>
+                <a href="#">Tienda</a>
+                <a href="#">Métodos de pago</a>
+                <a href="#">Términos de uso</a>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>¡Suscríbete para recibir actualizaciones de nuevas ofertas!</p>
+                <form action="">
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="submit" value="Suscribirse" class="btn">
+                </form>
+                <img src="images/payment.png" class="payment" alt="metodo pago">
+            </div>
+        </div>
+        <div class="credit"><span>&copy;2024. </span>Tienda de mascotas. Todos los derechos reservados.</div>
+    </section>
+
+    <!-- footer final -->
+
+    <!-- javascript sección -->
+    <script src="script.js"></script>
+    <script src="ajax.js"></script>
+    <script src="validacion.js"></script>
+    <script src="script_previa.js"></script>
+</body>
+</html>

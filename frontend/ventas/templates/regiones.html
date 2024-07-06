@@ -1,0 +1,102 @@
+{% extends 'master.html' %}
+
+
+{% block contenido %}
+<script src="/static/js/region.js"></script>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+  
+<table border=1>
+    <tr>
+        <td style="width:300px"></td>
+        <td>IdRegion</td>
+        <td><input id="txIdRegion"
+                   name = "txIdRegion"
+                   maxlength="10"
+                   type="text"
+                   value="1"
+                   >
+                </td>
+    </tr>    
+    <tr>
+        <td style="width:300px"></td>
+        <td>Código</td>
+        <td><input id="txCodigo"
+                   name = "txCodigo"
+                   maxlength="10"
+                   type="text"
+                   value="1"
+                   >
+                </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Nombre</td>
+        <td><input id="txNombre"
+                   name = "txNombre"
+                   maxlength="30"
+                   size="30"
+                   type="text"
+                   value="Region Metropolina "
+                   >
+                </td>
+    </tr>
+  
+    <tr>
+        <td></td>
+            <td  colspan="2">
+                <button id="btLeer"   onclick="javascript:regionLeer()">Leer</button>        
+                <button id="btLeer"   onclick="javascript:alert('hola');alert('como');">instruca</button>        
+                <button id="btLeer"   onclick="javascript:fuFuncion()">funcionando</button>        
+                <button disabledx id="btModificar" onclick="javascript:regionActualizar()">Modificar</button>        
+                <button disabledx id="btAgregar" onclick="javascript:regionAgregar()">Agregar</button>        
+                <button disabledx id="btEliminar" onclick="javascript:regionEliminar()">Eliminar</button>        
+                <button disabledx id="btLimpiar" onclick="javascript:limpiar()">Limpiar</button>        
+        </td>
+    </tr>                     
+    <tr>
+        <td></td>
+            <td  colspan="2">
+                <button id="btListarArr" onclick="javascript:empleadoListarArreglo()">ListarArreglo</button>        
+                <button id="btListarArr" onclick="javascript:regionListarInnerHtml()">Listar Inner  Html</button> 
+                <!-- <button id="btListarArr" onclick="javascript:empleadoListarHtmlPython()">Listar Html Python</button> 
+                <button id="btListarArr" onclick="javascript:empleadoListarHtmlViews()">Listar Html Views</button>  -->
+        </td>
+    </tr>                     
+</table>    
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<form method="POST" action="/puebla">
+</form>
+
+
+
+
+<div id="objInner">Reescribiremos este código</div>
+
+
+
+<script>
+    function fuFuncion(){
+        alert(" No funciona")
+        alert(" No funciona");alert(" No funciona")
+        alert(" No funciona")
+        alert(" No funciona")
+    }
+</script>
+
+
+{% endblock contenido %}
+

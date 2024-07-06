@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de mascotas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header sección -->
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="icons/logo.png" class="logo-img" alt="Logo">
+            <span class="logo-text">Tienda de mascotas</span>
+        </a>
+        
+        <nav class="navbar">
+            <a href="index.html" class="active" onclick="cargarArchivo('index.html')">Inicio</a>
+            <a href="nosotros.html" onclick="cargarArchivo('nosotros.html')">Nosotros</a>
+            <div class="dropdown">
+                <a href="tienda.html" class="dropbtn" onclick="cargarArchivo('tienda.html')">Tienda</a>
+                <div class="dropdown-content">
+                    <a href="seccion_perro.html" onclick="cargarArchivo('seccion_perro.html')">Perros</a>
+                    <a href="seccion_gato.html" onclick="cargarArchivo('seccion_gato.html')">Gatos</a>
+                </div>
+            </div>
+            <a href="donacion.html" onclick="cargarArchivo('donacion.html')">Donaciones</a>
+            <a href="contacto.html" onclick="cargarArchivo('contacto.html')">Contacto</a>
+        </nav>
+        
+        <!-- Contenedor donde se cargará el contenido -->
+        <div id="contenido"></div>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="¿Qué deseas buscar?">
+            <label class="fas fa-search"></label>
+        </form>
+
+        <!-- carrito de compras -->
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/comidas/comida_perro.png" alt="comida perro">
+                <div class="content">
+                    <h3>2KG Comida para Perro</h3>
+                    <span class="price">$19.180</span>
+                    <span class="quantity"> Cantidad: 2</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/bandana_perro/bandana_perro.png" alt="bandana perro">
+                <div class="content">
+                    <h3>Bandana para perro</h3>
+                    <span class="price">$1.850</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/arnes_perro/arnes_perro.png" alt="arnes perro">
+                <div class="content">
+                    <h3>Arnes para perro</h3>
+                    <span class="price">$10.990</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+            <div class="total">Total: $32.020</div>
+            <a href="#" class="btn">Ir a pagar</a>
+        </div>
+
+        <!-- carrito de compras final -->
+
+    </header>
+
+    <!-- header final -->
+
+    <!-- carousel sección -->
+
+    <div class="container">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/nosotros_banner.jpg" alt="Nosotros" width="100%" height="100%">
+              </div>
+              <div class="carousel-item">
+                <img src="images/tienda_banner.jpg" alt="Tienda" width="100%" height="100%">
+              </div>
+              <div class="carousel-item">
+                <img src="images/donaciones_banner.jpg" alt="Donaciones" width="100%" height="100%">
+              </div>
+              <div class="carousel-item">
+                <img src="images/contacto_banner.jpg" alt="Contacto" width="100%" height="100%">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- carousel final -->
+
+    <!-- banner sección -->
+
+    <section class="banner-container">
+        <div class="banner">
+            <img src="images/banner_2.jpg" alt="banner gatos">
+            <div class="content">
+                <span>Hasta 50% de descuento</span>
+                <h3>Sección de gatos</h3>
+                <a href="seccion_gato.html" class="btn"> Ver catálogo</a>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="images/banner.jpg" alt="banner perros">
+            <div class="content">
+                <span> Hasta 50% de descuento</span>
+                <h3>Sección de perros</h3>
+                <a href="seccion_perro.html" class="btn"> Ver catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- banner final -->
+
+    <!-- valores sección -->
+
+    <section class="valor">
+        <div class="heading">
+            <h3>Nuestro compromiso</h3>
+            <img src="images/mascotas.png" class="img-fluid" alt="compromiso" style="max-width: 100%; height: auto;">
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="icons/premio.png" alt="calidad">
+                <h3>Calidad</h3>
+                <p>Ofrecer productos de más alta calidad y seguridad para las mascotas en
+                    nuestro catálogo, garantizando plenamente su durabilidad y funcionalidad.</p>
+            </div>
+
+            <div class="box">
+                <img src="icons/hogar_mascota.png" alt="variedad">
+                <h3>Variedad</h3>
+                <p>Ofrecer una amplia gama de productos que satisfaga a los clientes y que
+                    ellos puedan encontrar todo lo que necesitan desde nuestro sitio web.</p>
+            </div>
+
+            <div class="box">
+                <img src="icons/kit_mascota.png" alt="bienestar">
+                <h3>Bienestar animal</h3>
+                <p>Buscamos proporcionar productos que cumplan con los estándares de seguridad
+                    y cuidado responsable de mascotas entre nuestros clientes.</p>
+            </div>
+
+            <div class="box">
+                <img src="icons/satisfacción.png" alt="satisfaccion">
+                <h3>Satisfacción del cliente</h3>
+                <p>Buscamos brindar un servicio al cliente excepcional, ofreciendo asistencia
+                    personalizada y garantizando una experiencia de compra fácil y agradable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- valores final -->
+
+    <!-- footer sección -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3> <img src="icons/logo.png" class="logo-img" alt="Logo" style="width: 15%;"> Informaciones</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i>+569-12345678</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i>serviciocliente@tda.cl</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Santiago, Chile #15243</a>
+            </div>
+
+            <div class="box">
+                <h3>Enlaces de interés</h3>
+                <a href="#">Tienda</a>
+                <a href="#">Métodos de pago</a>
+                <a href="#">Términos de uso</a>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>¡Suscríbete para recibir actualizaciones de nuevas ofertas!</p>
+                <form action="">
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="submit" value="Suscribirse" class="btn">
+                </form>
+                <img src="images/payment.png" class="payment" alt="metodo pago">
+            </div>
+        </div>
+        <div class="credit"><span>&copy;2024. </span>Tienda de mascotas. Todos los derechos reservados.</div>
+    </section>
+
+    <!-- footer final -->
+
+    <!-- javascript sección-->
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+    <script src="ajax.js"></script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header sección -->
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="icons/logo.png" class="logo-img" alt="Logo">
+            <span class="logo-text">Tienda de mascotas</span>
+        </a>
+        
+        <nav class="navbar">
+            <a href="index.html" class="active" onclick="cargarArchivo('index.html')">Inicio</a>
+            <a href="nosotros.html" onclick="cargarArchivo('nosotros.html')">Nosotros</a>
+            <div class="dropdown">
+                <a href="tienda.html" class="dropbtn" onclick="cargarArchivo('tienda.html')">Tienda</a>
+                <div class="dropdown-content">
+                    <a href="seccion_perro.html" onclick="cargarArchivo('seccion_perro.html')">Perros</a>
+                    <a href="seccion_gato.html" onclick="cargarArchivo('seccion_gato.html')">Gatos</a>
+                </div>
+            </div>
+            <a href="donacion.html" onclick="cargarArchivo('donacion.html')">Donaciones</a>
+            <a href="contacto.html" onclick="cargarArchivo('contacto.html')">Contacto</a>
+        </nav>
+        
+        <!-- Contenedor donde se cargará el contenido -->
+        <div id="contenido"></div>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="¿Qué deseas buscar?">
+            <label class="fas fa-search"></label>
+        </form>
+
+        <!-- carrito de compras -->
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/comidas/comida_perro.png" alt="comida perro">
+                <div class="content">
+                    <h3>2KG Comida para Perro</h3>
+                    <span class="price">$19.180</span>
+                    <span class="quantity"> Cantidad: 2</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/bandana_perro/bandana_perro.png" alt="bandana perro">
+                <div class="content">
+                    <h3>Bandana para perro</h3>
+                    <span class="price">$1.850</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="tienda/arnes_perro/arnes_perro.png" alt="arnes perro">
+                <div class="content">
+                    <h3>Arnes para perro</h3>
+                    <span class="price">$10.990</span>
+                    <span class="quantity"> Cantidad: 1</span>
+                </div>
+            </div>
+            <div class="total">Total: $32.020</div>
+            <a href="#" class="btn">Ir a pagar</a>
+        </div>
+
+        <!-- carrito de compras final -->
+
+    </header>
+
+    <!-- header final -->
+
+    <!-- sub heading sección -->
+
+    <div class="sub-heading">
+        <h1>Nuestros productos</h1>
+    </div>
+
+    <!-- sub heading final -->
+
+    <!-- tienda sección -->
+
+    <section class="tienda">
+        <div class="box-container">
+            <div class="product" data-name="p-1">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/arnes_gato/arnes_gato.png" alt="arnes gato">
+                    </div>
+                    <div class="content">
+                        <h3>Arnes para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$8.900 <span>$11.200</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-1"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-2">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/arnes_gato/arnes_gato3.png" alt="arnes gato">
+                    </div>
+                    <div class="content">
+                        <h3>Arnes para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$8.900 <span>$11.200</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-2"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-3">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/arnes_gato/arnes_gato4.png" alt="arnes gato">
+                    </div>
+                    <div class="content">
+                        <h3>Arnes para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$8.900 <span>$11.200</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-3"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-4">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/arnes_gato/arnes_gato2.png" alt="arnes gato">
+                    </div>
+                    <div class="content">
+                        <h3>Arnes para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$8.900 <span>$11.200</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-4"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-9">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/bandana_gato/bandana_gato.png" alt="bandana gato">
+                    </div>
+                    <div class="content">
+                        <h3>Bandana para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$1.850 <span>$2.600</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-9"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-10">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/bandana_gato/bandana_gato2.png" alt="bandana gato">
+                    </div>
+                    <div class="content">
+                        <h3>Bandana para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$1.850 <span>$2.600</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-10"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-11">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/bandana_gato/bandana_gato3.png" alt="bandana gato">
+                    </div>
+                    <div class="content">
+                        <h3>Bandana para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$1.850 <span>$2.600</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-11"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-12">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/bandana_gato/bandana_gato4.png" alt="bandana gato">
+                    </div>
+                    <div class="content">
+                        <h3>Bandana para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$1.850 <span>$2.600</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-12"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-17">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/comidas/comida_gato.png" alt="comida gato">
+                    </div>
+                    <div class="content">
+                        <h3>2KG Comida para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$9.590 <span>$13.500</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-17"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-18">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/comidas/comida_gato2.png" alt="comida gato">
+                    </div>
+                    <div class="content">
+                        <h3>2KG Comida para gato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$9.590 <span>$13.500</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-18"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-22">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/credenciales/credencial_2.png" alt="credencial">
+                    </div>
+                    <div class="content">
+                        <h3>Dije personalizado</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$5.990 <span>$7.000</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-22"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" data-name="p-23">
+                <div class="box">
+                    <div class="image">
+                        <img src="tienda/credenciales/credencial_3.png" alt="credencial">
+                    </div>
+                    <div class="content">
+                        <h3>Dije personalizado</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$5.990 <span>$7.000</span></div>
+                    </div>
+                    <div class="icons">
+                        <a href="javascript:void(0)" class="fas fa-shopping-cart"></a>
+                        <a href="javascript:void(0)" class="fas fa-heart"></a>
+                        <a href="javascript:void(0)" class="fas fa-eye ver-mas" data-name="p-23"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- tienda final -->
+
+    <!-- previa_productos sección -->
+
+    <div class="products-preview">
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="tienda/arnes_gato/arnes_gato.png" alt="">
+            <h3>Arnes para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$8.900</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+     
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="tienda/arnes_gato/arnes_gato3.png" alt="">
+            <h3>Arnes para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$8.900</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <img src="tienda/arnes_gato/arnes_gato4.png" alt="">
+            <h3>Arnes para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$8.900</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-4">
+            <i class="fas fa-times"></i>
+            <img src="tienda/arnes_gato/arnes_gato2.png" alt="">
+            <h3>Arnes para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$8.900</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-9">
+            <i class="fas fa-times"></i>
+            <img src="tienda/bandana_gato/bandana_gato.png" alt="">
+            <h3>Bandana para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$1.850</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-10">
+            <i class="fas fa-times"></i>
+            <img src="tienda/bandana_gato/bandana_gato2.png" alt="">
+            <h3>Bandana para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$1.850</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-11">
+            <i class="fas fa-times"></i>
+            <img src="tienda/bandana_gato/bandana_gato3.png" alt="">
+            <h3>Bandana para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$1.850</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-12">
+            <i class="fas fa-times"></i>
+            <img src="tienda/bandana_gato/bandana_gato4.png" alt="">
+            <h3>Bandana para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$1.850</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-17">
+            <i class="fas fa-times"></i>
+            <img src="tienda/comidas/comida_gato.png" alt="">
+            <h3>2KG Comida para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$9.590</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-18">
+            <i class="fas fa-times"></i>
+            <img src="tienda/comidas/comida_gato2.png" alt="">
+            <h3>2KG Comida para gato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$9.590</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-22">
+            <i class="fas fa-times"></i>
+            <img src="tienda/credenciales/credencial_2.png" alt="">
+            <h3>Dije personalizado</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$5.990</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-23">
+            <i class="fas fa-times"></i>
+            <img src="tienda/credenciales/credencial_3.png" alt="">
+            <h3>Dije personalizado</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+            <div class="price">$5.990</div>
+            <div class="buttons">
+                <a href="#" class="buy">Comprar ahora</a>
+                <a href="#" class="cart">Añadir al carro</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- previa_productos final -->
+
+    <!-- footer sección -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3> <img src="icons/logo.png" class="logo-img" alt="Logo" style="width: 15%;"> Informaciones</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i>+569-12345678</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i>serviciocliente@tda.cl</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Santiago, Chile #15243</a>
+            </div>
+
+            <div class="box">
+                <h3>Enlaces de interés</h3>
+                <a href="#">Tienda</a>
+                <a href="#">Métodos de pago</a>
+                <a href="#">Términos de uso</a>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>¡Suscríbete para recibir actualizaciones de nuevas ofertas!</p>
+                <form action="">
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="submit" value="Suscribirse" class="btn">
+                </form>
+                <img src="images/payment.png" class="payment" alt="metodo pago">
+            </div>
+        </div>
+
+        <div class="credit"><span>&copy;2024. </span>Tienda de mascotas. Todos los derechos reservados.</div>
+    </section>
+
+    <!-- footer final -->
+
+    <!-- javascript sección -->
+    <script src="script.js"></script>
+    <script src="ajax.js"></script>
+    <script src="script_previa.js"></script>
+</body>
+</html>
